@@ -1,0 +1,4 @@
+#ifndef FINDANDREPLACE_H
+#define FINDANDREPLACE_H
+
+#endif
