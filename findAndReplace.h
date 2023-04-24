@@ -3,7 +3,10 @@
 
 #include <iostream>
 #include <fstream>
+#include <chrono>
+#include <sys/stat.h>
 
-bool checkStartArgs(int); // Used to check if user wrote arguments correctly
+// Used to check if user wrote arguments correctly
+void checkStartArgs(int, char*[]);
 
 #endif
