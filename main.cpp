@@ -19,9 +19,7 @@ int main(int argc, char *argv[]){
     auto diff = end - start;
 
     std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count();
-
-    std::cout << "Program terminated with success!\n";
-    std::cout << "Time taken by program is: " << std::chrono::duration<double, std::milli> (diff).count() << " ms\n\n";
+    std::cout << "Program terminated with success!\nTime taken by program is: " << std::chrono::duration<double, std::milli> (diff).count() << " ms\n\n";
 
     return 0;
 }
