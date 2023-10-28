@@ -4,7 +4,6 @@
 // argv[2] = text to delete
 // argv[3] = text to add
 
-
 int main(int argc, char *argv[]){
 
     // Just for testing, don't know if will be left in final program
@@ -24,10 +23,14 @@ int main(int argc, char *argv[]){
     string textToDelete = string(argv[2]);
     string textToAdd = string(argv[3]);
     
-    
+
     // Creating aux variables for future operations
     string newFileName = (nameOfFile+"_new");
-    int delTextDim = textToDelete.length();
+    int delTextDim = string(textToDelete).length();
+
+
+    // Checking if file already exists
+    // TODO
 
 
     // Opening file
@@ -44,9 +47,8 @@ int main(int argc, char *argv[]){
         // Code to check every line, find substring = textToDelete
         // Preparing substitution
         int currentPos = 0;
-        while((currentPos = fileLine.find(textToDelete)) != -1){
+        while((currentPos = fileLine.find(textToDelete)) != -1){            
             fileLine.erase(currentPos, delTextDim);
-
             fileLine.insert(currentPos, textToAdd);
         }
         
@@ -54,6 +56,7 @@ int main(int argc, char *argv[]){
         newFile << fileLine;
     }
 	
+
 	// Closing file
 	oldFile.close();
     newFile.close();
@@ -65,6 +68,7 @@ int main(int argc, char *argv[]){
 
     std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count();
     std::cout << "Program terminated with success!\nTime taken by program is: " << std::chrono::duration<double, std::milli> (diff).count() << " ms\n\n";
+
 
     return 0;
 }

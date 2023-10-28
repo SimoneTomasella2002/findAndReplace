@@ -36,6 +36,9 @@
   "C_Cpp_Runner.useAddressSanitizer": false,
   "files.associations": {
     "*.embeddedhtml": "html",
-    "iosfwd": "cpp"
+    "iosfwd": "cpp",
+    "*.tcc": "cpp",
+    "fstream": "cpp",
+    "locale": "cpp"
   }
 }
