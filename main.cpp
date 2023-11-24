@@ -30,7 +30,8 @@ int main(int argc, char *argv[]){
 
 
     // Checking if file already exists
-    // TODO
+    if ( exists(newFileName) )
+        remove(newFileName);
 
 
     // Opening file
@@ -59,7 +60,10 @@ int main(int argc, char *argv[]){
 
 	// Closing file
 	oldFile.close();
+    remove(nameOfFile);
+    
     newFile.close();
+    rename(newFileName, nameOfFile);
 
 
     // Finishing timer stuff

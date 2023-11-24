@@ -39,6 +39,8 @@
     "iosfwd": "cpp",
     "*.tcc": "cpp",
     "fstream": "cpp",
-    "locale": "cpp"
+    "locale": "cpp",
+    "ostream": "cpp",
+    "stdexcept": "cpp"
   }
 }
